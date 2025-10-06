@@ -1,95 +1,197 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wedding Countdown — 2026/09/01</title>
+  <title>العداد التنازلي للزفاف — 2026/09/01</title>
   <style>
-    :root{--bg:#0f172a;--card:#0b1220;--accent:#ff6b81;--accent2:#ffb86b;--glass:rgba(255,255,255,0.06)}
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial;background:radial-gradient(1200px 600px at 10% 10%, rgba(255,107,129,0.06), transparent), radial-gradient(800px 400px at 90% 90%, rgba(255,184,107,0.04), transparent), var(--bg);color:#e6eef8}
-    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:32px}
-    .card{width:100%;max-width:900px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);backdrop-filter: blur(6px);border-radius:20px;padding:32px;display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
-    .hero{display:flex;flex-direction:column;gap:12px}
-    h1{margin:0;font-size:28px;letter-spacing:-0.02em}
-    p.lead{margin:0;opacity:0.9}
+    :root {
+      --bg: #0f172a;
+      --card: #0b1220;
+      --accent: #ff6b81;
+      --accent2: #ffb86b;
+      --glass: rgba(255, 255, 255, 0.06);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,107,129,0.06), transparent),
+        radial-gradient(800px 400px at 90% 90%, rgba(255,184,107,0.04), transparent), var(--bg);
+      color: #e6eef8;
+    }
 
-    .timer{display:flex;gap:14px;margin-top:18px}
-    .unit{background:var(--glass);padding:18px 16px;border-radius:12px;min-width:88px;text-align:center;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.02)}
-    .num{font-size:28px;font-weight:700;color:linear-gradient(90deg,var(--accent),var(--accent2));}
-    .label{font-size:12px;opacity:0.85;margin-top:6px}
+    .wrap {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
 
-    .aside{display:flex;flex-direction:column;gap:14px;align-items:center}
-    .card-heart{width:100%;background:linear-gradient(90deg,var(--accent),#ff8aa0);padding:20px;border-radius:14px;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;color:#061024}
-    .heart{font-size:48px}
-    .small{font-size:13px;opacity:0.95}
-    .meta{font-size:13px;opacity:0.9}
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.04);
+      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-    .controls{display:flex;gap:8px;margin-top:12px}
-    button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:10px;color:inherit;cursor:pointer}
+    h1 {
+      margin: 0;
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
+      text-align: center;
+    }
 
-    .confetti{position:fixed;left:0;top:0;pointer-events:none;right:0;bottom:0}
+    .lead {
+      text-align: center;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      opacity: 0.9;
+    }
 
-    @media (max-width:880px){.card{grid-template-columns:1fr;max-width:680px}.aside{flex-direction:row;justify-content:space-between}}
+    .timer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .unit {
+      background: var(--glass);
+      padding: 14px;
+      border-radius: 12px;
+      min-width: 75px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.02);
+    }
+
+    .num {
+      font-size: clamp(1.4rem, 6vw, 2rem);
+      font-weight: 700;
+    }
+
+    .label {
+      font-size: clamp(0.7rem, 2vw, 0.9rem);
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    .card-heart {
+      width: 100%;
+      background: linear-gradient(90deg,var(--accent),#ff8aa0);
+      padding: 16px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+      justify-content: center;
+      color: #061024;
+      text-align: center;
+    }
+
+    .heart {
+      font-size: 40px;
+    }
+
+    .status-box {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    button {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: inherit;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .confetti {
+      position: fixed;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      right: 0;
+      bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .hero {
+        flex: 1;
+      }
+      .aside {
+        width: 280px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card" role="main">
+    <div class="card">
       <div class="hero">
-        <h1>Counting down to our wedding — <strong>Sep 1, 2026</strong></h1>
-        <p class="lead">A little daily reminder of the big day. This counter updates live every second. When the date arrives it will celebrate — after that it will show how many days we've been married.</p>
+        <h1>العد التنازلي ليوم زفافنا — <strong>1 سبتمبر 2026</strong></h1>
+        <p class="lead">تذكير يومي باليوم الكبير ❤️</p>
 
         <div class="timer" aria-live="polite">
-          <div class="unit">
-            <div class="num" id="days">0</div>
-            <div class="label">Days</div>
-          </div>
-          <div class="unit">
-            <div class="num" id="hours">00</div>
-            <div class="label">Hours</div>
-          </div>
-          <div class="unit">
-            <div class="num" id="minutes">00</div>
-            <div class="label">Minutes</div>
-          </div>
-          <div class="unit">
-            <div class="num" id="seconds">00</div>
-            <div class="label">Seconds</div>
-          </div>
+          <div class="unit"><div class="num" id="days">0</div><div class="label">أيام</div></div>
+          <div class="unit"><div class="num" id="hours">00</div><div class="label">ساعات</div></div>
+          <div class="unit"><div class="num" id="minutes">00</div><div class="label">دقائق</div></div>
+          <div class="unit"><div class="num" id="seconds">00</div><div class="label">ثواني</div></div>
         </div>
 
-        <div style="margin-top:18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-          <button id="toggleCount">When arrived: celebrate!</button>
-          <button id="setMidnight">Use midnight local time</button>
-          <div style="font-size:13px;opacity:0.85">Target: <span id="targetText">2026-09-01 00:00 (local)</span></div>
+        <div class="controls">
+          <button id="toggleCount">احتفل الآن 🎉</button>
+          <button id="setMidnight">منتصف الليل المحلي</button>
         </div>
-
-        <p style="margin-top:12px;font-size:13px;opacity:0.9">Tip: you can paste this single HTML file in your browser or put it on a simple web server. Want custom colors, a time of day, or your names shown? I can update it.</p>
+        <div style="text-align:center;font-size:0.8rem;opacity:0.8;margin-top:6px">الهدف: <span id="targetText">2026-09-01 00:00 (المحلي)</span></div>
       </div>
 
-      <aside class="aside">
+      <div class="aside">
         <div class="card-heart">
           <div class="heart">💖</div>
-          <div style="font-weight:700">Your Wedding</div>
-          <div class="small">September 1, 2026</div>
-          <div class="meta">Every morning it will remind you — made with ❤️</div>
+          <div style="font-weight:700">زفافنا</div>
+          <div class="small">1 سبتمبر 2026</div>
+          <div class="meta" style="font-size:0.8rem;opacity:0.9">كل صباح تذكير بالحب</div>
         </div>
-
-        <div style="text-align:center">
-          <div style="font-size:12px;opacity:0.9">Status</div>
-          <div id="status" style="font-weight:700;margin-top:8px">Counting down...</div>
-        </div>
-      </aside>
-
+        <div class="status-box"><div id="status">جارٍ العد...</div></div>
+      </div>
     </div>
   </div>
 
   <canvas id="confetti" class="confetti"></canvas>
 
   <script>
-    // target date: Sep 1, 2026 local midnight by default
-    let target = new Date(2026, 8, 1, 0, 0, 0); // months are 0-indexed (8 -> Sep)
+    let target = new Date(2026, 8, 1, 0, 0, 0);
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
     const minutesEl = document.getElementById('minutes');
@@ -97,13 +199,13 @@
     const statusEl = document.getElementById('status');
     const targetText = document.getElementById('targetText');
 
-    function pad(n){return String(n).padStart(2,'0')}
+    function pad(n){return String(n).padStart(2,'0');}
 
     function update() {
       const now = new Date();
-      let diff = target - now; // ms, can be negative
+      let diff = target - now;
       const past = diff < 0;
-      if (past) diff = now - target; // show time since
+      if (past) diff = now - target;
 
       const sec = Math.floor(diff/1000) % 60;
       const min = Math.floor(diff/1000/60) % 60;
@@ -115,45 +217,31 @@
       minutesEl.textContent = pad(min);
       secondsEl.textContent = pad(sec);
 
-      if (!past) {
-        statusEl.textContent = 'Counting down...';
-      } else {
-        statusEl.textContent = `We're married! (${day} days)`;
-      }
-
-      // auto celebration when exact moment arrives (within 1 second)
-      if (!past && Math.abs(target - now) < 1100) {
-        celebrate();
-      }
+      statusEl.textContent = !past ? 'جارٍ العد...' : `🎊 متزوجون منذ ${day} يوم`;
+      if (!past && Math.abs(target - now) < 1100) celebrate();
     }
 
+    setInterval(update, 1000);
     update();
-    const timer = setInterval(update, 1000);
 
-    // Controls
     document.getElementById('setMidnight').addEventListener('click', ()=>{
-      // reset to midnight local
-      target = new Date(target.getFullYear(), target.getMonth(), target.getDate(), 0,0,0);
-      targetText.textContent = formatTarget(target) + ' (local)';
+      target = new Date(target.getFullYear(), target.getMonth(), target.getDate(), 0, 0, 0);
+      targetText.textContent = formatTarget(target) + ' (المحلي)';
     });
 
-    document.getElementById('toggleCount').addEventListener('click', ()=>{
-      // jump to show celebrate action immediately
-      celebrate();
-    });
+    document.getElementById('toggleCount').addEventListener('click', celebrate);
 
     function formatTarget(d){
       const pad = (n)=>String(n).padStart(2,'0');
       return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
     }
-    targetText.textContent = formatTarget(target) + ' (local)';
+    targetText.textContent = formatTarget(target) + ' (المحلي)';
 
-    // Simple confetti implementation
     const confettiCanvas = document.getElementById('confetti');
     const ctx = confettiCanvas.getContext('2d');
     let W = confettiCanvas.width = innerWidth;
     let H = confettiCanvas.height = innerHeight;
-    window.addEventListener('resize', ()=>{W=confettiCanvas.width=innerWidth;H=confettiCanvas.height=innerHeight});
+    window.addEventListener('resize', ()=>{W=confettiCanvas.width=innerWidth;H=confettiCanvas.height=innerHeight;});
 
     const pieces = [];
     function spawnConfetti(count=120){
@@ -168,7 +256,7 @@
           tilt: Math.random()*0.5-0.25
         });
       }
-      if(!animRunning) {animRunning=true;requestAnimationFrame(step)}
+      if(!animRunning){animRunning=true;requestAnimationFrame(step);}
     }
 
     function drawPiece(p){
@@ -177,11 +265,11 @@
       ctx.fillStyle = p.color; ctx.fill();
     }
 
-    let animRunning=false;
+    let animRunning = false;
     function step(){
       ctx.clearRect(0,0,W,H);
       for(let i=pieces.length-1;i>=0;i--){
-        const p=pieces[i];
+        const p = pieces[i];
         p.x += p.vx; p.y += p.vy; p.vy += 0.04; p.tilt += 0.01;
         drawPiece(p);
         if(p.y>H+30 || p.x<-50 || p.x>W+50) pieces.splice(i,1);
@@ -191,14 +279,11 @@
 
     function celebrate(){
       spawnConfetti(200);
-      // small pulse animation on status
-      const el = statusEl;
-      el.style.transform='scale(1.02)';
-      setTimeout(()=>el.style.transform='scale(1)', 900);
+      statusEl.style.transform='scale(1.1)';
+      setTimeout(()=>statusEl.style.transform='scale(1)',600);
     }
 
-    // Accessibility: pause confetti via keyboard (press 'c')
-    window.addEventListener('keydown', (e)=>{ if(e.key.toLowerCase()==='c') pieces.length=0; });
+    window.addEventListener('keydown', (e)=>{if(e.key.toLowerCase()==='c') pieces.length=0;});
   </script>
 </body>
 </html>
